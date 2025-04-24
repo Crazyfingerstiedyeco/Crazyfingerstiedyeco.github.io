@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light only">
+  <title>Crazy Fingers Tie-Dye</title>
+
+  <style>
+    @font-face {
+      font-family: 'StrongGlasgow';
+      src: url('StrongGlasgow.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    html, body {
+      background: #ffc0c0 url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR4nGNgYGBgAAAABAABJzQnCgAAAABJRU5ErkJggg==') repeat;
+      background-size: cover;
+      color: black;
+      forced-color-adjust: none;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'StrongGlasgow', Arial, sans-serif;
+      color: black;
+    }
+
+    .container {
+      background: rgba(255, 192, 192, 0.9);
+      padding: 30px 20px;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 360px; /* ✅ Slimmer box */
+      width: 75%;       /* ✅ Less wide on mobile */
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      forced-color-adjust: none;
+    }
+
+    .logo {
+      width: 150px;
+      height: auto;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      forced-color-adjust: none;
+    }
+
+    h1 {
+      font-size: 34px;
+      margin: 10px 0 30px;
+      font-family: 'StrongGlasgow', Arial, sans-serif;
+      font-weight: normal;
+      forced-color-adjust: none;
+    }
+
+    .link a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(#d3d3d3, #d3d3d3);
+      color: black;
+      text-decoration: none;
+      padding: 12px;
+      margin: 12px 0;
+      border-radius: 5px;
+      font-size: 24px;
+      font-weight: bold;
+      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease;
+      filter: invert(0%);
+      forced-color-adjust: none;
+    }
+
+    .link a:hover {
+      background-color: #b0b0b0;
+      color: black;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .link a:active {
+      transform: translateY(2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .link img {
+      height: 24px;
+      width: auto;
+      filter: invert(0%);
+      forced-color-adjust: none;
+    }
+
+    /* Responsive text break for mobile */
+    .break-mobile {
+      display: inline;
+    }
+
+    @media (max-width: 600px) {
+      .break-mobile {
+        display: block;
+      }
+    }
+
+    /* 🌞 Fallback anti-darkmode */
+    @media (prefers-color-scheme: dark) {
+      body, .container, .link a {
+        background: none;
+        background-color: rgba(255, 192, 192, 0.9);
+        color: black;
+      }
+
+      .link a {
+        background: linear-gradient(#d3d3d3, #d3d3d3);
+      }
+
+      .link a:hover {
+        background-color: #b0b0b0;
+      }
+    }
+  </style>
+
+  <script>
+    window.onload = function() {
+      var randomNumber = Math.floor(Math.random() * 11) + 1;
+      var imageUrl = 'backgrounds/' + randomNumber + '.png';
+      document.body.style.backgroundImage = 'url(' + imageUrl + ')';
+    }
+  </script>
+</head>
+
+<body>
+
+  <div class="container">
+    <!-- Logo Image -->
+    <img src="logo.png" alt="Crazy Fingers Tie-Dye Logo" class="logo">
+
+    <h1>Crazy Fingers <span class="break-mobile">Tie Dye Co</span></h1>
+
+    <div class="link">
+      <a href="https://www.etsy.com/shop/crazyfingerstiedyeco" target="_blank" title="Etsy Shop">
+        <img src="1659111371black-etsy-logo.png" alt="Etsy Icon">
+      </a>
+    </div>
+
+    <div class="link">
+      <a href="https://www.instagram.com/crazy.fingers.tiedyeco/" target="_blank" title="Instagram">
+        <img src="4691240_instagram_icon.png" alt="Instagram Icon">
+      </a>
+    </div>
+
+    <div class="link">
+      <a href="https://www.facebook.com/p/Crazy-Fingers-Tie-Dye-Co-61559553609760/" target="_blank" title="Facebook">
+        <img src="104498_facebook_icon.png" alt="Facebook Icon">
+      </a>
+    </div>
+
+    <div class="link">
+      <a href="mailto:johnnytdavison@gmail.com" title="Email">
+        <img src="2674096_object_email_web_essential_icon.png" alt="Email Icon">
+      </a>
+    </div>
+
+  </div>
+
+</body>
+</html>
